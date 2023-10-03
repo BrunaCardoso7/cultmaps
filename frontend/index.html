@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultMaps - crie seu evento</title>
+</head>
+<body>
+    <form action="http://localhost:3000/api/services" method="post">
+        <div class="conteiner-form">
+            <div class="conteiner-input">
+                <label for="nome-evento">Evento:
+                    <input type="text" name="nome" id="nome" placeholder="@ex: IIFeira cultural">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="nome-empresa">Empresa:
+                    <input type="text" name="author" id="author" placeholder="@ex:Stamby enterprise">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="descricao">Descrição do evento:
+                    <input type="text" name="descricao" id="descricao" placeholder="">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="data">Data do evento:
+                    <input type="date" name="data" id="data">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="time">Horário do evento:
+                    <input type="text" name="hora" id="hora" placeholder="@ex: 15:00">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="image">imagem uploud:
+                    <input type="text" name="imagem" id="imagem" placeholder="link da imagem">
+                </label>
+            </div>
+            <button id="botao-salvar">Salvar</button>
+        </div>
+    </form>
+    <script src="./javascript/index.js"></script>
+</body>
+</html>

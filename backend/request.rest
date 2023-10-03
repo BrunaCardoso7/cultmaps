@@ -1,0 +1,32 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "nome": "Filme do twice",
+    "author": "mcae calvo",
+    "descricao":"seu pai de calcinha",
+    "data": "21/11/2024",
+    "hora": "9horas",
+    "imagem": "https://saopauloparacriancas.com.br/wp-content/uploads/2023/09/Who-Are-TWICE-Everything-to-Know-About-the-Breakthrough-K-Pop-Girl-Group.jpeg"
+}
+###
+GET http://localhost:3000/api/services
+
+###
+GET http://localhost:3000/api/services/651a4ff788a813bdc2b54075
+
+###
+DELETE http://localhost:3000/api/services/651a501388a813bdc2b54077
+
+###
+PUT  http://localhost:3000/api/services/651a4fed88a813bdc2b54073
+Content-Type: application/json
+
+{
+    "nome": "Filme do mamaco",
+    "author": "macae calvo",
+    "descricao":"seu pai de calcinha",
+    "data": "21/11/2024",
+    "hora": "10horas",
+    "imagem": "https://saopauloparacriancas.com.br/wp-content/uploads/2023/09/Who-Are-TWICE-Everything-to-Know-About-the-Breakthrough-K-Pop-Girl-Group.jpeg"
+}
