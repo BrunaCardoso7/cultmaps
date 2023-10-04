@@ -3,9 +3,9 @@ const router = require('express').Router();
 const serviceControllers = require('../controllers/serviceControllers');
 
 // funções
-router.route("/services").post((req, res)=>{
+router.route("/services").post(async (req, res)=>{
     console.log('Dados recebidos no controlador:', req.body)
-    serviceControllers.create(req, res)
+    return serviceControllers.create(req, res)
 });
 router.route("/services").get((req,res)=> serviceControllers.getAll(req, res));
 router.route("/services/:id").get((req, res)=> serviceControllers.get(req, res));

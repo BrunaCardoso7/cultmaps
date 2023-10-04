@@ -3,19 +3,19 @@ const {Eventos: EventosModels} = require('../models/Eventos')
 const serviceControllers = {
     create: async(req, res)=>{
         try{
-            const { nome, author, descricao, data, hora, imagem } = req.body; // Declare explicitamente as variáveis
             console.log('dados recebidos', req.body);
             const response = await EventosModels.create({
-                nome, 
-                author, 
-                descricao, 
-                data, 
-                hora, 
-                imagem 
+                nome: req.body.nome, 
+                author: req.body.author, 
+                descricao: req.body.descricao, 
+                data: req.body.data, 
+                hora: req.body.hora, 
+                imagem: req.body.imagem
             });
             res.status(201).json({response, msg: "Serviço criado com sucesso"});
         }catch(e){
-            console.log(`error: ${e}`)
+            console.log(`erroer: ${e}`)
+            return res.status(500).send()
         }
     },
     getAll:async(req, res)=>{

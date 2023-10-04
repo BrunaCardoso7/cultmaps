@@ -6,7 +6,7 @@
     <title>CultMaps - crie seu evento</title>
 </head>
 <body>
-    <form action="http://localhost:3000/api/services" method="post">
+    <form action="http://localhost:3000/api/services" method="post"  enctype="application/x-www-form-urlencoded">
         <div class="conteiner-form">
             <div class="conteiner-input">
                 <label for="nome-evento">Evento:
@@ -38,7 +38,8 @@
                     <input type="text" name="imagem" id="imagem" placeholder="link da imagem">
                 </label>
             </div>
-            <button id="botao-salvar">Salvar</button>
+            <!-- <button id="botao-salvar">Salvar</button> -->
+            <input type="submit" value="Salvar">
         </div>
     </form>
     <script src="./javascript/index.js"></script>

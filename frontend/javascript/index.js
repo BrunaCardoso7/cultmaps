@@ -1,36 +1,50 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const form = document.querySelector('form')
-    const btn_save = document.getElementById('botao-salvar')
+    const form = document.querySelector('form');
+    const btn_save = document.getElementById('botao-salvar');
     btn_save.addEventListener("click", function (e){
-        e.preventDefault()
-        const formData = new FormData(form)
-        const url = form.action
-        // if(
-            console.log(formData.get("nome"))
-            console.log(formData.get("author"))
-            console.log(formData.get("descricao"))
-            console.log(formData.get("data"))
-            console.log(formData.get("hora"))
-            console.log(formData.get("imagem"))
-        
-        // ){
+        e.preventDefault();
+        const formData = new FormData(form);
+        const url = form.action;
+
+        formData.append("nome", document.getElementById('nome').value);
+        formData.append("author", document.getElementById('author').value);
+        formData.append("descricao", document.getElementById('descricao').value);
+        formData.append("data", document.getElementById('data').value);
+        formData.append("hora", document.getElementById('hora').value);
+        formData.append("imagem", document.getElementById('imagem').value);
+
+        if (
+            formData.get("nome") &&
+            formData.get("author") &&
+            formData.get("descricao") &&
+            formData.get("data") &&
+            formData.get("hora") &&
+            formData.get("imagem")
+        ){
             fetch(url, {
                 method: "POST",
                 body: formData,
                 headers: {
-                    "Content-Type": "multipart/form-data",
+                    // Deixe o Content-Type ser definido automaticamente
                 },
             })
-            .then((response) => response.json())
+            .then((response) => { console.log('response'); return response.json() })
             .then((data) => {
-                console.log(data)
+                console.log(data);
             })
             .catch((error) =>{
-                console.error("erro ao enviar os dados para o servidor"+error)
-            })
-        // } else {
-        //     console.log("campos obrigatórios não preechidos")
-        // }
+                console.error("erro ao enviar os dados para o servidor" + error);
+            });
+            console.log(formData.get("nome"))
 
-    })  
-})
+        } else {
+            console.log("campos obrigatórios não preenchidos");
+        }
+
+    });  
+});
+
+
+
+
+

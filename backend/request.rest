@@ -2,11 +2,11 @@ POST http://localhost:3000/api/services
 Content-Type: application/json
 
 {
-    "nome": "Filme do twice",
-    "author": "mcae calvo",
-    "descricao":"seu pai de calcinha",
-    "data": "21/11/2024",
-    "hora": "9horas",
+    "nome": "Cavaleiros do zodiaco",
+    "author": "matuê careca",
+    "descricao":"dedo perdido do lula",
+    "data": "15/11/2024",
+    "hora": "20horas",
     "imagem": "https://saopauloparacriancas.com.br/wp-content/uploads/2023/09/Who-Are-TWICE-Everything-to-Know-About-the-Breakthrough-K-Pop-Girl-Group.jpeg"
 }
 ###

@@ -4,16 +4,10 @@ const app = express();
 
 app.use(cors());
 
-const multer = require('multer');
-const upload = multer();
-
-app.use(upload.array()); // Lida com solicitações multipart/form-data
-
 const bodyParser = require('body-parser');
 
-// Use o body-parser para analisar solicitações JSON e de formulário
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
 
