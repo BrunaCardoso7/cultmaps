@@ -7,8 +7,10 @@ const serviceControllers = {
             const response = await EventosModels.create({
                 nome: req.body.nome, 
                 author: req.body.author, 
+                tipo: req.body.tipo,
                 descricao: req.body.descricao, 
                 data: req.body.data, 
+                localizacao: req.body.localizacao,
                 hora: req.body.hora, 
                 imagem: req.body.imagem
             });
@@ -64,8 +66,10 @@ const serviceControllers = {
         const service ={
             nome: req.body.nome,
             author:  req.body.author,
+            tipo: req.body.tipo,
             descricao:  req.body.descricao,
             data:  req.body.data,
+            localizacao: req.body.localizacao,
             hora:  req.body.hora,
             imagem:  req.body.imagem
         };

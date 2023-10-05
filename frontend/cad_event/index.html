@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultMaps - crie seu evento</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <form action="http://localhost:3000/api/services" method="post"  enctype="application/x-www-form-urlencoded">
+        <div class="conteiner-form">
+            <h1>Crie e divulgue seu evento</h1>
+            <div class="conteiner-input">
+                <label for="nome-evento">Evento
+                    <input type="text" name="nome" id="nome" placeholder="@ex: IIFeira cultural">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="tipo">Categoria do evento:</label>
+                <select name="tipo" id="tipo">
+                    <option value="tecnologia"selected>Tecnologia</option>
+                    <option value="showAoVivo" >Show ao vivo</option>
+                    <option value="filmes">filmes</option>
+                    <option value="corporativo">Corporativo</option>
+                </select>
+            </div>
+            <div class="conteiner-input">
+                <label for="tipo-evento">Empresa
+                    <input type="text" name="author" id="author" placeholder="@ex:Stamby enterprise">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="descricao">Descrição do evento
+                    <input type="text" name="descricao" id="descricao" placeholder="">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="data">Data do evento
+                    <input type="datetime-local" name="data" id="data">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="tipo">Categoria do evento:</label>
+                <select name="localizacao" id="localizacao">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div class="conteiner-input">
+                <label for="time">Horário do evento
+                    <input type="text" name="hora" id="hora" placeholder="@ex: 15:00">
+                </label>
+            </div>
+            <div class="conteiner-input">
+                <label for="image">imagem uploud
+                    <input type="text" name="imagem" id="imagem" placeholder="link da imagem">
+                </label>
+            </div>
+            <input type="submit" value="Salvar">
+        </div>
+    </form>
+    <script src="../javascript/index.js"></script>
+</body>
+</html>

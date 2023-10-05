@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CultMaps - crie seu evento</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/eventos.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
 </head>
 <body>
-    <form action="http://localhost:3000/api/services" method="post"  enctype="application/x-www-form-urlencoded">
-        <div class="conteiner-form">
-            <div class="conteiner-input">
-                <label for="nome-evento">Evento:
-                    <input type="text" name="nome" id="nome" placeholder="@ex: IIFeira cultural">
-                </label>
+    <header>
+        <div class="conteiner-header">
+            <div class="logo">
+                <h2 id="logo-cult">Cult</h2>
+                <h2 id="logo-maps">Maps</h2>
             </div>
-            <div class="conteiner-input">
-                <label for="nome-empresa">Empresa:
-                    <input type="text" name="author" id="author" placeholder="@ex:Stamby enterprise">
-                </label>
+            <nav class="conteiner-navBar">
+                <a href="#">Página inicial</a>
+                <a href="#">Eventos</a>
+                <a href="#">Mapas</a>
+                <a href="Login.html" id="btn_cadastro">Cadastra-se</a>
+            </nav>
+            <div class="sub-nav">
+                <i class="fa-solid fa-bars" id="btn-menu"></i>
             </div>
-            <div class="conteiner-input">
-                <label for="descricao">Descrição do evento:
-                    <input type="text" name="descricao" id="descricao" placeholder="">
-                </label>
-            </div>
-            <div class="conteiner-input">
-                <label for="data">Data do evento:
-                    <input type="date" name="data" id="data">
-                </label>
-            </div>
-            <div class="conteiner-input">
-                <label for="time">Horário do evento:
-                    <input type="text" name="hora" id="hora" placeholder="@ex: 15:00">
-                </label>
-            </div>
-            <div class="conteiner-input">
-                <label for="image">imagem uploud:
-                    <input type="text" name="imagem" id="imagem" placeholder="link da imagem">
-                </label>
-            </div>
-            <!-- <button id="botao-salvar">Salvar</button> -->
-            <input type="submit" value="Salvar">
         </div>
-    </form>
-    <script src="./javascript/index.js"></script>
+    </header>
+    <div class="search-container">
+        <input type="text" id="search-box" placeholder="Pesquisar eventos">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <section>
+        <div class="conteiner-cards" id="api-data">
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./script/eventos.js"></script>
+    <script src="./script/index.js"></script>
 </body>
 </html>

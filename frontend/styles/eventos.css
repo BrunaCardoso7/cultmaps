@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+}
+.conteiner-header{
+    background-color: aliceblue;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+    box-shadow: 0px 0px 3px gray;
+}
+.conteiner-navBar{
+    display: none;
+}
+.conteiner-navBar a{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+ 
+    font-weight: 300;
+    font-size: 1.1em;
+}
+.conteiner-navBar a:hover{
+    color: red;
+}
+.fa-solid{
+    color: aliceblue;
+    font-size: 1.8em;
+    display: block;
+}
+.conteiner-navBar #btn_cadastro{
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 30px;
+    border-radius: 14px;
+    border: 2px solid #0500FF;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #0500FF;
+}
+.conteiner-navBar #btn_cadastro:hover{
+    background-color: #0500FF;
+    padding: 5px 10px;
+    border-radius: 14px;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: white;
+    border: 2px solid #0500FF;
+    transition: .2s;
+}
+
+.logo h2{
+    font-size: 1.8em;   
+    line-height: 22px;
+}
+.logo #logo-cult{
+    color: #FF0000;
+}
+.logo #logo-maps{
+    color: #0500FF;
+}
+.sub-nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+@media (min-width: 700px){
+    .conteiner-header{
+        background-color: rgb(228, 241, 252);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25%;
+    }
+    .conteiner-navBar{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .conteiner-navBar a{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        text-decoration: none;
+        color: #141414;
+        font-weight: 300;
+        font-size: 1.1em;
+    }
+    .conteiner-navBar a:hover{
+        color: red;
+    }
+    .conteiner-navBar #btn_cadastro{
+        background-color: transparent;
+        padding: 5px 30px;
+        border-radius: 14px;
+        border: 2px solid #0500FF;
+        font-weight: 500;
+        font-size: 1.2em;
+        color: #0500FF;
+    }
+    .conteiner-navBar #btn_cadastro:hover{
+        background-color: #0500FF;
+        padding: 5px 30px;
+        border-radius: 14px;
+        font-weight: 500;
+        font-size: 1.2em;
+        color: white;
+        border: 2px solid #0500FF;
+        transition: .2s;
+    }
+    .logo h2{
+        font-size: 1.8em;   
+        line-height: 22px;
+    }
+    .logo #logo-cult{
+        color: #FF0000;
+    }
+    .logo #logo-maps{
+        color: #0500FF;
+    }
+    .sub-nav{
+        display: none;
+    }
+    .fa-solid{
+        display: none;
+        color: #141414;
+        font-size: 1.8em;
+    }
+}
+/*
+@media (max-width: 1200px){
+    .conteiner-header{
+        background-color: black;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25%;
+    }
+    .conteiner-navBar{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .conteiner-navBar a{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        text-decoration: none;
+        color: aliceblue;
+        font-weight: 300;
+        font-size: 1.1em;
+    }
+    .conteiner-navBar a:hover{
+        color: red;
+    }
+    .fa-solid{
+        color: aliceblue;
+        font-size: 1.8em;
+    }
+    .conteiner-navBar #btn_cadastro{
+        background-color: transparent;
+        padding: 5px 30px;
+        border-radius: 14px;
+        border: 2px solid #0500FF;
+        font-weight: 500;
+        font-size: 1.2em;
+        color: #0500FF;
+    }
+    .conteiner-navBar #btn_cadastro:hover{
+        background-color: #0500FF;
+        padding: 5px 30px;
+        border-radius: 14px;
+        font-weight: 500;
+        font-size: 1.2em;
+        color: white;
+        border: 2px solid #0500FF;
+        transition: .2s;
+    }
+    .logo h2{
+        font-size: 1.8em;   
+        line-height: 22px;
+    }
+    .logo #logo-cult{
+        color: #FF0000;
+    }
+    .logo #logo-maps{
+        color: #0500FF;
+    }
+} */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+.search-container #search-box{
+    width: 70vw;
+    height: 30px;
+    border-radius: 14px;
+    border: none;
+    padding: 0 40px;
+    background-color: rgb(200, 213, 224);
+}
+.search-container #search-box::placeholder{
+    color: rgb(75, 75, 75);
+    /* font-size: 1.2em; */
+}
+.search-container #search-box:focus{
+    outline: 1px solid #0500FF;
+    font-size: 1.1em;
+
+}
+.fa-solid{
+    position: absolute;
+    font-size: 1.3em;
+    color: rgb(75, 75, 75);
+    left: 82%;
+}
+/* margin-top: 50px;
+
+button{
+background-color: #141414;
+color: aliceblue;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+
+}
+button:hover {
+    background-color: #0b0b0b;
+} */
