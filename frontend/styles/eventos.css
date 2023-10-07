@@ -8,10 +8,22 @@ html, body{
     width: 100vw;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: aliceblue;
+    background-color: rgb(232, 237, 245);
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 8px; 
+} 
+body::-webkit-scrollbar-thumb {
+background-color: #3498db; 
+border-radius: 6px; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+background-color: #2980b9;
 }
 .conteiner-header{
-    background-color: aliceblue;
+    background-color: white;
     height: 70px;
     display: flex;
     align-items: center;
@@ -78,7 +90,7 @@ html, body{
 
 @media (min-width: 700px){
     .conteiner-header{
-        background-color: rgb(228, 241, 252);
+        background-color: white;
         height: 70px;
         display: flex;
         align-items: center;
@@ -180,10 +192,19 @@ section .conteiner-cards{
     gap: 50px;
 }
 .conteiner-cards .card{
-    background-color: rgb(200, 213, 224);
+    border: 2px solid rgb(200, 213, 224);
     width: 250px;
     height: 300px;
     border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.conteiner-cards .card:hover{
+    transition: .5s;
+    background-color: white;
+    border: 4px solid white;
 }
 .card .img{
     background-color: #141414;
@@ -202,13 +223,20 @@ section .conteiner-cards{
     align-items: center;
     gap: 5px;
 }
-.card .descricao> button{
-    background-color: #FF0000;
-    border: none;
+#moreInfo{
+    background-color: transparent;
+    border: 2px solid #FF0000;
     padding: 5px 20px;
     font-size: 1.1em;
     border-radius: 10px;
+    color: #FF0000;
+    margin-bottom: 5px;
+}
+#moreInfo:hover{
+    transition: .3s;
+    background-color: #FF0000;
     color: aliceblue;
+
 }
 .wrapper-tags{
     display: flex;
@@ -225,14 +253,14 @@ section .conteiner-cards{
     margin-top: 10px;
 }
 #desc{
-    font-size: .9em;
+    font-size: .7em;
     text-align: center;
     color: #3f3e3e;
     padding: 0 10px;
 
 }
 #title{
-    font-size: 1em;
+    font-size: .8em;
     text-align: center; 
     font-weight: 600;
     color: #252525;

@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(salvador-pelourinho-centro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding:20px 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 1px 0px #00000060;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: white;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid #4038a0;
+}
+
+.label-float label {
+    color: #000000;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #4038a0;
+}
+
+.label-float select {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: white;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float select:focus {
+    border-bottom: 2px solid #4038a0;
+}
+
+.label-float select + label {
+    color: #000000;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+.label-float select:focus + label,
+.label-float select:valid + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #4038a0;
+}
+
+button {
+    background-color: white;
+    border-color: #000000;
+    color: #000000;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+}
+
+.label-float input,
+.label-float select {
+    width: 100%;
+    padding: 5px;
+    display: block;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: white;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.label-float {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.label-float input:focus,
+.label-float select:focus {
+    border-bottom: 2px solid #4038a0;
+}
+
+.label-float label {
+    color: #000000;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label,
+.label-float select:focus + label,
+.label-float select:valid + label {
+    font-size: 13px;
+    top: -10px;
+    color: #4038a0;
+}
+
+.label-float select {
+    width: 100%;
+    padding: 5px;
+    display: block;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: white;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.label-float {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.label-float select:focus {
+    border-bottom: 2px solid #4038a0;
+}
+
+.label-float label {
+    color: #000000;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: all .3s ease-out;
+}
+
+.label-float select:focus + label,
+.label-float select:valid + label {
+    font-size: 13px;
+    top: -10px;
+    color: #4038a0;
+}
+
+
+button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: #000000;
+}
+
+#msgError {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#msgSuccess {
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#maiorIdade {
+    display: none;
+}
+
+#maiorIdade + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+#maiorIdade + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#maiorIdade:checked + label:before {
+    background-color: #4038a0;
+    border-color: #4038a0;
+}
+
+#maiorIdade:checked + label:after {
+    content: '✓';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #000;
+    font-size: 12px;
+}
+
+#maiorIdade + label:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #000;
+    font-size: 12px;
+}
+
+#maiorIdadeLabel {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#maiorIdadeLabel:hover {
+    text-decoration: underline;
+    color: #4038a0;
+}
+
+#privacyCheckbox {
+    display: none;
+}
+
+#privacyCheckbox + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#privacyCheckbox + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#privacyCheckbox:checked + label:before {
+    background-color: #4038a0;
+    border-color: #4038a0;
+}
+
+#privacyCheckbox:checked + label:after {
+    content: '✓';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #000;
+    font-size: 12px;
+}
+
+#privacyCheckbox + label:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #000;
+    font-size: 12px;
+}
+
+#privacyLabel {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#privacyLabel:hover {
+    text-decoration: underline;
+    color: #4038a0;
+}

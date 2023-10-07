@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const serviceControllers = require('../controllers/serviceControllers');
 
+
 // funções
 router.route("/services").post(async (req, res)=>{
     console.log('Dados recebidos no controlador:', req.body)

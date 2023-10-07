@@ -14,7 +14,7 @@ axios.get(apiUrl)
             card.classList.add('card')
 
             const img = document.createElement('div')
-            // img.setAttribute("src", objeto)
+            img.setAttribute("src", objeto.imagem)
             img.classList.add('img')
             
             card.appendChild(img)
@@ -43,8 +43,13 @@ axios.get(apiUrl)
             desc.textContent = objeto.descricao
             descricao.appendChild(desc)
 
+            const button = document.createElement('button')
+            button.setAttribute("id", "moreInfo")
+            button.textContent = "Mais informações"
             card.appendChild(descricao)
+            card.appendChild(button)
             apiDataElement.appendChild(card)
+            
         });
     })
     .catch(e=>{
