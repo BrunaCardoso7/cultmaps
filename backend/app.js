@@ -23,5 +23,5 @@ app.use('/api', routes)
 
 
 app.listen(3000, function(){
-    console.log("servidor aberto na porta 3000!!");
+    console.log("servidor aberto na porta 3000 parabens!!");
 });
