@@ -34,8 +34,10 @@ const eventosSchema = new Schema({
             required: true
         },
         imagem:{
-            type: String,
-            required: true
+        //    nome:{ 
+        type: String,
+        required: true
+      
         },
     },   
     { timestamps:true } 

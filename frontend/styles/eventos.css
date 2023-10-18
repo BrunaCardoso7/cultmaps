@@ -180,11 +180,12 @@ background-color: #2980b9;
     position: absolute;
     font-size: 1.3em;
     color: rgb(75, 75, 75);
-    left: 82%;
+    left: 95%;
 }
 section .conteiner-cards{
     margin-top: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
     align-items: center;
     justify-content: center;
     min-height: 70vh;
@@ -208,12 +209,13 @@ section .conteiner-cards{
 }
 .card .img{
     background-color: #141414;
-    height: 150px;
+    height: 139px;
     border-radius: 10px 10px 0 0 ;
 }
 .card .img img{
     background-color: #141414;  
-    height: 150px;
+    height: 139px;
+    width: 250px;
     border-radius: 10px 10px 0 0 ;
 }
 .card .descricao{
@@ -264,4 +266,20 @@ section .conteiner-cards{
     text-align: center; 
     font-weight: 600;
     color: #252525;
+}
+
+/* modal */
+.section-main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.modal-moreInfo{
+    position: absolute;
+    background-color: white; 
+    width: 50vw;
+    height: 90vh;
+    margin-top: 10px;
 }

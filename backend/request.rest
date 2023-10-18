@@ -11,6 +11,8 @@ Content-Type: application/json
 }
 ###
 GET http://localhost:3000/api/services
+###
+GET http://localhost:3000/api/pesquisa?pesquisa=localizacao&termoPesquisa=Acre
 
 ###
 GET http://localhost:3000/api/services/651a4ff788a813bdc2b54075

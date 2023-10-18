@@ -25,28 +25,31 @@
             </div>
         </div>
     </header>
-    <div class="search-container">
-        <input type="text" id="search-box" placeholder="Pesquisar eventos">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    <section>
-        <div class="conteiner-cards" id="api-data">
-            <div class="card">
-                <div class="img">
-                    
-                </div>
-                <div class="descricao">
-                    <div class="wrapper-tags">
-                        <p>localização</p>
-                        <p>data</p>
+    <main>
+        <section class="section-main">
+            <div class="search-container">
+                <input type="text" name="pesquisa" id="search-box" placeholder="Pesquisar eventos">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="conteiner-cards" id="api-data">
+                <div class="card">
+                    <div class="img">
+        
                     </div>
-                    <p id="title">show tomorrow X together</p>
-                    <p id="desc">Reunião corparativa reunindo os maiores palestrante do piaui</p>
-                    <button id="moreInfo">mais informações</button>
+                    <div class="descricao">
+                        <div class="wrapper-tags">
+                            <p>localização</p>
+                            <p >data</p>
+                        </div>
+                        <p id="title">show tomorrow X together</p>
+                        <p id="desc">Reunião corparativa reunindo os maiores palestrante do piaui</p>
+                        <button id="moreInfo">mais informações</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="./script/eventos.js"></script>

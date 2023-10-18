@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-    <form action="http://localhost:3000/api/services" method="post"  enctype="application/x-www-form-urlencoded">
+    <form action="http://localhost:3000/api/services" enctype="multipart/form-data" method="post">
         <div class="conteiner-form">
             <h1>Crie e divulgue seu evento</h1>
             <div class="conteiner-input">
@@ -18,10 +18,17 @@
             <div class="conteiner-input">
                 <label for="tipo">Categoria do evento:</label>
                 <select name="tipo" id="tipo">
-                    <option value="tecnologia"selected>Tecnologia</option>
-                    <option value="showAoVivo" >Show ao vivo</option>
-                    <option value="filmes">filmes</option>
-                    <option value="corporativo">Corporativo</option>
+                    <option value="Tecnologia Games e Geeks"selected>Tecnologia Games e Geeks</option>
+                    <option value="Festas e Shows" >Festas e Shows  </option>
+                    <option value="Artes Cinemas e Lazer">Artes Cinemas e Lazer</option>
+                    <option value="Infantil">Infantil</option>
+                    <option value="Pride">Pride</option>
+                    <option value="Esporte">Esporte</option>
+                    <option value="Cursos e Workshops">Cursos e Workshops</option>
+                    <option value="Congresso e Palestras">Congresso e Palestras</option>
+                    <option value="Cursos e Workshops">Cursos e Workshops</option>
+                    <option value="Saúde e Bem estar">Saúde e Bem estar</option>
+                    <option value="Moda e Beleza">Moda e Beleza</option>
                 </select>
             </div>
             <div class="conteiner-input">
@@ -77,7 +84,7 @@
                 </label>
             </div>
             <div class="conteiner-input">
-                <label for="image">imagem uploud
+                <label for="imagem">imagem uploud
                     <input type="file" name="imagem" id="imagem" placeholder="link da imagem">
                 </label>
             </div>

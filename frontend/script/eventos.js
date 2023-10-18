@@ -10,13 +10,14 @@ axios.get(apiUrl)
         console.log(data)
         data.forEach(objeto => {
             console.log(data)
+            //cards
             const card = document.createElement('div')
             card.classList.add('card')
 
-            const img = document.createElement('div')
+            const img = document.createElement('img')
             img.setAttribute("src", objeto.imagem)
             img.classList.add('img')
-            
+            console.log(objeto.imagem)
             card.appendChild(img)
 
             const descricao = document.createElement('div')
@@ -24,6 +25,7 @@ axios.get(apiUrl)
 
             const wrapperTags = document.createElement('div')
             wrapperTags.classList.add('wrapper-tags')
+
 
             const p_loc = document.createElement('p')
             p_loc.textContent = objeto.localizacao
@@ -50,6 +52,12 @@ axios.get(apiUrl)
             card.appendChild(button)
             apiDataElement.appendChild(card)
             
+            //modal
+            const btn_more_info = document.getElementById('moreInfo')
+            btn_more_info.addEventListener("click", (evt)=>{
+                
+            })
+
         });
     })
     .catch(e=>{
