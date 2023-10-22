@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CultMaps- Encontre eventos perto de você</title>
     
-    <link rel="stylesheet" href="styles/eventos.css">
+    <link rel="stylesheet" href="styles/main-page.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
@@ -17,8 +18,8 @@
                 <h2 id="logo-maps">Maps</h2>
             </div>
             <nav class="conteiner-navBar">
-                <a href="#">Página inicial</a>
-                <a href="#">Eventos</a>
+                <a href="index.html">Página inicial</a>
+                <a href="eventos.html">Eventos</a>
                 <a href="./cad-evt.html">Divulgar evento</a>
                 <a href="cadastro.html" id="btn_cadastro">Cadastrar-se</a>
             </nav>
@@ -28,19 +29,66 @@
         </div>
     </header>
     <main>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.sympla.com.br/641a53975ed30-lg.jpg" class="d-block w-100 img-carousel" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets.bileto.sympla.com.br/eventmanager/production/3pra03bn5igmh1dslvpph4d5cp8i4t4eeg0kri5m11h8nd3dsle98kvqjm8gk4ck2fkoah7n4akn2trrt5pubvflfp3s5kpj81t8kqb.webp" class="d-block w-100 img-carousel" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://hitsoundmagazine.files.wordpress.com/2023/09/live-nation-twice.png"class="d-block w-100 img-carousel" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <section class="section-search">
             <div class="search-container">
                 <input type="text" name="pesquisa" id="search-box" placeholder="Pesquisar eventos">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </section>
-        <h2>Tecnologia Games e Geeks</h2>
-        <section class="swiper mySwiper">
-            <div class="swiper-wrapper conteiner-cards" id="api-data">
+        <section id="section-cards" class="swiper mySwiper">
+            <h2>Tecnologia Games e Geeks</h2>
+            <div class="swiper-wrapper conteiner-cards" id="api-data1">
+               
+            </div>
+            <h2>Congresso e Palestras</h2>
+            <div class="swiper-wrapper conteiner-cards" id="api-data2">
                
             </div>
         </section>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close" id="modal-close">&times;</span>
+            <div class="img">
+                <img src="img/maxresdefault.jpg" alt="">
+            </div>
+              <h2>Detalhes do Evento</h2>
+              <p>Localização: <span id="modal-location"></span></p>
+              <p>Data: <span id="modal-date"></span></p>
+              <p>Descrição: <span id="modal-description"></span></p>
+              <div class="btn-pages">
+                <button id="page-ofc">Página oficial</button>
+                <a id="open-maps" class="map-button">Abrir Maps</a>
+              </div>
+            </div>
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/eventos.js"></script>

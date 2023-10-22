@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica;
-    color: #323232;
-    border: none;
     font-family: 'Poppins', sans-serif;
 }
 html, body{
@@ -136,7 +133,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .logo h2{
         font-size: 1.8em;   
-        line-height: 20px;
+        line-height: 15px;
         font-weight: 700
     }
     .logo #logo-cult{
@@ -191,13 +188,221 @@ body::-webkit-scrollbar-thumb:hover {
     color: rgb(14, 14, 14);
     left: 95%;
 }
-main{
-    width: 100vw;
-    height: 80vh;
+section .conteiner-cards{
+    margin-top: 0px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    min-height: 65vh;
+    flex-wrap: nowrap;
+    gap: 5px;
 }
-h1{
-    font-size: 3em;
+.conteiner-cards .card{
+    border: 2px solid rgb(200, 213, 224);
+    width: 250px;
+    height: 310px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+}
+.conteiner-cards .card:hover{
+    transition: .5s;
+    background-color: white;
+    border: 2px solid white;
+}
+.card .img{
+    background-color: #141414;
+    height: 150px;
+    border-radius: 10px 10px 10px 10px;
+}
+.card .img> img{
+    background-color: #141414;  
+    height: 160px;
+    border-radius: 10px 10px 0 0 ;
+}
+.card .descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.moreInfo{
+    background-color: #FF0000;
+    color: aliceblue;
+    padding: 5px 20px;
+    font-size: .9em;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 5px;
+}
+.moreInfo:hover{
+    transition: .3s;
+    background-color: #ad0101;
+    color: aliceblue;
+
+}
+.wrapper-tags{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    margin: 5px 0;
+}
+.wrapper-tags p{
+    background-color: #00B107;
+    padding: 1px 10px;
+    border-radius: 14px;
+    font-size: .8em;
+    color: aliceblue;
+    margin-top: 10px;
+    margin: 0;
+}
+.cat{
+    color: #0500FF;
+    font-size: .8em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.desc{
+    margin: 0;
+    font-size: .8em;
+    text-align: center;
+    color: #3f3e3e;
+    padding: 0 10px;
+
+}
+.title{
+    margin: 0;
+    font-size: .8em;
+    text-align: center; 
+    font-weight: 600;
+    color: #252525;
+}
+.swiper {
+    width: 100%;
+    height: 40%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+.mySwiper h2{
+    width: 250px;
+    color: #FF0000;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-left: 120px;
+    border: 1px solid #FF0000;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50px;
+}
+.modal{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content{
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 70%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 14px;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.9em;
+}
+.close:hover{
+    color: red;
+}
+.modal h2{
+    text-align: center;
+    padding: 0 40px;
+    font-size: 24px;
+    color: #383838;
+    margin-bottom: 10px;
+}
+
+.modal p{
+
+    padding: 0 40px;
+    font-size: 16px;
+}
+.modal .img{
+    width: 100%;
+    height: 50%;
+}
+.modal .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0 ;
+}
+.btn-pages{
+    display: flex;
+    justify-content: space-around;
+    gap: 0%;
+}
+.btn-pages #page-ofc{
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 6px 20px;
+    font-size: 1.1em;
+    border-radius: 14px;
+}
+.btn-pages #page-ofc:hover{
+    transition: .3s;
+    background-color: rgb(0, 92, 0);
+
+}
+.btn-pages #open-maps{
+    text-decoration: none;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 6px 20px;
+    text-align: start;
+    font-size: 1.1em;
+    border-radius: 14px;
+}
+.btn-pages #open-maps:hover{
+    transition: .3s;
+    background-color: rgb(0, 0, 182);
+
+}
+.button-content i{
+    color: white;
+    margin-right: 10px;
 }
