@@ -1,65 +1,96 @@
-// const axios = require ('axios')
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        },
+        "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        },
+        "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        },
+        "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 50,
+        },
+    },
+});
 
 const apiUrl = 'http://localhost:3000/api/services'
 
 const apiDataElement = document.getElementById('api-data')
 
 axios.get(apiUrl)
-    .then( response =>{
+.then( response =>{
         const data = response.data
         console.log(data)
         data.forEach(objeto => {
+            console.log(objeto.categoria)
             console.log(data)
-            //cards
-            const card = document.createElement('div')
-            card.classList.add('card')
+            if(objeto.categoria === 'Tecnologia Games e Geeks'){
+                //cards 
+                const card = document.createElement('div')
+                card.classList.add('swiper-slide')
+                card.classList.add('card')
 
-            const img = document.createElement('img')
-            img.setAttribute("src", objeto.imagem)
-            img.classList.add('img')
-            console.log(objeto.imagem)
-            card.appendChild(img)
-
-            const descricao = document.createElement('div')
-            descricao.classList.add('desc')
-
-            const wrapperTags = document.createElement('div')
-            wrapperTags.classList.add('wrapper-tags')
-
-
-            const p_loc = document.createElement('p')
-            p_loc.textContent = objeto.localizacao
-            wrapperTags.appendChild(p_loc)
-            const p_data = document.createElement('p')
-            p_data.textContent = "23-04-2023"
-            wrapperTags.appendChild(p_data)
-            descricao.appendChild(wrapperTags)
-
-            const title = document.createElement('p')
-            title.setAttribute("id", "title")
-            title.textContent = objeto.nome
-            descricao.appendChild(title)
-
-            const desc = document.createElement('p')
-            desc.setAttribute("id", "desc")
-            desc.textContent = objeto.descricao
-            descricao.appendChild(desc)
-
-            const button = document.createElement('button')
-            button.setAttribute("id", "moreInfo")
-            button.textContent = "Mais informações"
-            card.appendChild(descricao)
-            card.appendChild(button)
-            apiDataElement.appendChild(card)
-            
-            //modal
-            const btn_more_info = document.getElementById('moreInfo')
-            btn_more_info.addEventListener("click", (evt)=>{
+                const img = document.createElement('img')
+                img.setAttribute("src", objeto.imagem)
+                img.classList.add('img')
+                console.log(objeto.imagem)
+                card.appendChild(img)
                 
-            })
+                const descricao = document.createElement('div')
+                descricao.classList.add('desc')
+                
+                const categoria = document.createElement('p')
+                categoria.textContent = objeto.categoria
+                categoria.classList.add('cat')
+                descricao.appendChild(categoria)
+                
+                const wrapperTags = document.createElement('div')
+                wrapperTags.classList.add('wrapper-tags')
+                
+                
+                const p_loc = document.createElement('p')
+                p_loc.textContent = objeto.localizacao
+                wrapperTags.appendChild(p_loc)
+                const p_data = document.createElement('p')
+                p_data.textContent = "23-04-2023"
+                wrapperTags.appendChild(p_data)
+                descricao.appendChild(wrapperTags)
+                
 
+                const title = document.createElement('p')
+                title.classList.add('title')
+                title.textContent = objeto.nome
+                descricao.appendChild(title)
+
+                const desc = document.createElement('p')
+                desc.classList.add('desc')
+                desc.textContent = objeto.descricao
+                descricao.appendChild(desc)
+
+                const button = document.createElement('button')
+                button.classList.add('moreInfo')
+                button.textContent = "Mais informações"
+                card.appendChild(descricao)
+                card.appendChild(button)
+                apiDataElement.appendChild(card)
+            } else {
+                console.log('categoria não existente')
+            }
+           
         });
     })
     .catch(e=>{
         console.error('Erro: ', e )
-    })
+})

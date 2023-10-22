@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CultMaps- Encontre eventos perto de você</title>
+    
     <link rel="stylesheet" href="styles/eventos.css">
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -26,32 +28,21 @@
         </div>
     </header>
     <main>
-        <section class="section-main">
+        <section class="section-search">
             <div class="search-container">
                 <input type="text" name="pesquisa" id="search-box" placeholder="Pesquisar eventos">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-
-            <div class="conteiner-cards" id="api-data">
-                <div class="card">
-                    <div class="img">
-        
-                    </div>
-                    <div class="descricao">
-                        <div class="wrapper-tags">
-                            <p>localização</p>
-                            <p >data</p>
-                        </div>
-                        <p id="title">show tomorrow X together</p>
-                        <p id="desc">Reunião corparativa reunindo os maiores palestrante do piaui</p>
-                        <button id="moreInfo">mais informações</button>
-                    </div>
-                </div>
+        </section>
+        <h2>Tecnologia Games e Geeks</h2>
+        <section class="swiper mySwiper">
+            <div class="swiper-wrapper conteiner-cards" id="api-data">
+               
             </div>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script src="./script/eventos.js"></script>
     <script src="./script/index.js"></script>
 </body>

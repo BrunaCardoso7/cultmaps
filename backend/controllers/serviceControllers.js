@@ -13,6 +13,7 @@ const serviceControllers = {
                 nome: req.body.nome,
                 author: req.body.author,
                 tipo: req.body.tipo,
+                categoria: req.body.categoria, 
                 descricao: req.body.descricao,
                 data: req.body.data,
                 localizacao: req.body.localizacao,
@@ -48,7 +49,8 @@ const serviceControllers = {
             console.log('dados recebidos', req.body);
             const response = await EventosModels.create({
                 nome: req.body.nome, 
-                author: req.body.author, 
+                author: req.body.author,
+                categoria: req.body.categoria, 
                 tipo: req.body.tipo,
                 descricao: req.body.descricao, 
                 data: req.body.data, 
@@ -108,6 +110,7 @@ const serviceControllers = {
         const service ={
             nome: req.body.nome,
             author:  req.body.author,
+            categoria: req.body.categoria, 
             tipo: req.body.tipo,
             descricao:  req.body.descricao,
             data:  req.body.data,

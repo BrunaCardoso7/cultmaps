@@ -25,6 +25,10 @@ const eventosSchema = new Schema({
                 return value;
             }
         }, 
+        categoria:{
+            type: String,
+            required: true
+        },
         localizacao:{
             type: String, 
             required: true,

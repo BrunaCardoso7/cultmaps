@@ -18,7 +18,7 @@ GET http://localhost:3000/api/pesquisa?pesquisa=localizacao&termoPesquisa=Acre
 GET http://localhost:3000/api/services/651a4ff788a813bdc2b54075
 
 ###
-DELETE http://localhost:3000/api/services/651f245feeedcd79a8afd153
+DELETE http://localhost:3000/api/services/65314ebc4d5638d82f4cd29a
 
 ###
 PUT  http://localhost:3000/api/services/651a4fed88a813bdc2b54073
