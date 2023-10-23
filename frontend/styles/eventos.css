@@ -74,13 +74,13 @@ body::-webkit-scrollbar-thumb:hover {
     transition: .2s;
 }
 .logo h2{
-    font-size: 1.8em;   
+    font-size: 1.3em;   
     line-height: 22px;
 }
-.logo #logo-cult{
+.logo .logo-cult{
     color: #FF0000;
 }
-.logo #logo-maps{
+.logo .logo-maps{
     color: #0500FF;
 }
 .sub-nav{

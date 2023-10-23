@@ -99,32 +99,30 @@ axios.get(apiUrl)
             }
            
         });
+        const moreInfo = document.querySelectorAll(".moreInfo")
+        console.log(moreInfo)
+        const modal = document.getElementById("modal");
+        const modalClose = document.getElementById("modal-close");
+        moreInfo.forEach(btn =>{
+            btn.addEventListener("click", (e)=>{
+            if( modal.style.display == "none"){
+                modal.style.display = "block"
+            }else{
+                modal.style.display = "none"
+            }
+            modalClose.addEventListener("click", closeModal)
+            // Fechar o modal quando clicar fora da caixa modal
+            function closeModal() {
+                modal.style.display = "none";
+            }
+            window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }   
+        });
+    })
+})
     })
     .catch(e=>{
         console.error('Erro: ', e )
-})
-
-
-const moreInfo = document.querySelectorAll(".moreInfo")
-console.log(moreInfo)
-const modal = document.getElementById("modal");
-const modalClose = document.getElementById("modal-close");
-moreInfo.forEach(btn =>{
-    btn.addEventListener("click", (e)=>{
-        if( modal.style.display == "none"){
-            modal.style.display = "block"
-        }else{
-            modal.style.display = "none"
-        }
-        modalClose.addEventListener("click", closeModal)
-        // Fechar o modal quando clicar fora da caixa modal
-        function closeModal() {
-            modal.style.display = "none";
-        }
-        window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
-        });
-    })
 })

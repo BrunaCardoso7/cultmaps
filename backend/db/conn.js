@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 async function main(){
     try{
         await mongoose.connect(
-            "mongodb+srv://cultmapsEnterprise:Odpgs9nkesFF3WkE@cultmap.qfxaslp.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp",
+            "mongodb+srv://obitadrawing:V70HuUQVP3ls9lhW@cluster0.x1eqeqc.mongodb.net/?retryWrites=true&w=majority",
         )
 
         console.log("conectado ao banco")

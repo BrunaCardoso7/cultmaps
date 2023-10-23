@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    /* overflow-x: hidden; */
+
 }
 html, body{
     position: relative;
@@ -72,12 +74,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .logo h2{
     font-size: 1.8em;   
-    line-height: 22px;
+    /* line-height: 22px; */
 }
-.logo #logo-cult{
+.logo .logo-cult{
     color: #FF0000;
 }
-.logo #logo-maps{
+.logo .logo-maps{
     color: #0500FF;
 }
 .sub-nav{
@@ -132,7 +134,7 @@ body::-webkit-scrollbar-thumb:hover {
         transition: .2s;
     }
     .logo h2{
-        font-size: 1.8em;   
+        font-size: 1.5em;   
         line-height: 15px;
         font-weight: 700
     }
@@ -152,7 +154,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 .img-carousel{
-    height: 85vh;
+    height: 90vh;
 }
 .search-container {
     display: flex;
@@ -405,4 +407,61 @@ section .conteiner-cards{
 .button-content i{
     color: white;
     margin-right: 10px;
+}
+footer{
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(58, 58, 58);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.conteiner-row-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row-one{
+    display: flex;
+    justify-content: space-around;
+    gap: 40%;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.rede-sociais i{
+    font-size: 2em;
+    margin-right: 20px;
+}
+.rede-sociais i:hover{
+    color: #0500FF;
+}
+.conteiner-row-one .conteiner-menu-footer{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.conteiner-menu-footer .menu-footer {
+    display: flex;
+    flex-direction: column;    
+}
+.menu-footer a{
+    text-decoration: none;
+    color: #252525;
+}
+.menu-footer a:hover{
+    text-decoration: none;
+    color: #0500FF;
+}
+.conteiner-row-one .destac{
+    font-weight: 600;
+}
+.conteiner-row-one .destac:hover{
+    color: #252525;
+}
+.conteiner-row-one p{
+    margin-top: 20px;
+    text-align: center;
 }
