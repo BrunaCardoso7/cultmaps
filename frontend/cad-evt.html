@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../frontend/styles/index.css">
 </head>
 <body>
-    <form action="http://localhost:3000/api/services" enctype="multipart/form-data" method="post">
+    <form action="http://localhost:4000/pictures/" enctype="multipart/form-data" method="post">
         <div class="conteiner-form">
             <h1>Crie e divulgue seu evento</h1>
             <div class="conteiner-input">
@@ -77,15 +77,10 @@
                     <option value="Sergipe">Sergipe</option>
                     <option value="Tocantins">Tocantins</option>
                 </select>
-            </div>
-            <div class="conteiner-input">
-                <label for="time">Horário do evento
-                    <input type="text" name="hora" id="hora" placeholder="@ex: 15:00">
-                </label>
-            </div>
+            </div>  
             <div class="conteiner-input">
                 <label for="imagem">imagem uploud
-                    <input type="file" name="imagem" id="imagem" placeholder="link da imagem">
+                    <input type="file" name="file" id="file" placeholder="link da imagem">
                 </label>
             </div>
             <input type="submit" value="Salvar">

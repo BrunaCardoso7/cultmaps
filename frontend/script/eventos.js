@@ -25,7 +25,7 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
-const apiUrl = 'http://localhost:3000/api/services'
+const apiUrl = 'http://localhost:4000/pictures/'
 const section = document.getElementById('section-cards')
 const apiDataElement = document.getElementById('api-data1')
 const apiDataElement2 = document.getElementById('api-data2')
@@ -45,9 +45,9 @@ axios.get(apiUrl)
                 card.classList.add('card')
             
                 const img = document.createElement('img')
-                img.setAttribute("src", objeto.imagem)
+                img.setAttribute("src", objeto.src)
                 img.classList.add('img')
-                console.log(objeto.imagem)
+                console.log(objeto.src)
                 card.appendChild(img)
                 
                 const descricao = document.createElement('div')
