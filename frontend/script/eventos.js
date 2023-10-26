@@ -32,7 +32,6 @@ const apiDataElement2 = document.getElementById('api-data2')
 axios.get(apiUrl)
 .then( response =>{
         const data = response.data
-        console.log(data)
         data.forEach(objeto => {
             console.log(objeto.categoria)
             console.log(data)
