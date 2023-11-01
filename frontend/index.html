@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
 </head>
 <body>
     <header>
@@ -34,31 +35,42 @@
     </header>
     <main>
         <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="slides">
+    
+                <input class="input" type="radio" name="slide" id="slide1" checked>
+                <input class="input" type="radio" name="slide" id="slide2">
+                <input class="input" type="radio" name="slide" id="slide3">
+                
+    
+    
+                <div class="slide s1">
+                    <img class="image" src="https://hitsoundmagazine.files.wordpress.com/2023/09/live-nation-twice.png" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img class="image" src="images\pelourinho-e-centro-historico.jpg" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img class="image" src="images\salvador-pelourinho-centro.png" alt="">
+                </div>
+                    
+                <div class="navigation">
+            
+                    <label class="bar1" for="slide1"></label>
+                    <label class="bar2" for="slide2"></label>
+                    <label class="bar3" for="slide3"></label>
+                
+            
+                </div>
+    
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://images.sympla.com.br/641a53975ed30-lg.jpg" class="d-block w-100 img-carousel" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://assets.bileto.sympla.com.br/eventmanager/production/3pra03bn5igmh1dslvpph4d5cp8i4t4eeg0kri5m11h8nd3dsle98kvqjm8gk4ck2fkoah7n4akn2trrt5pubvflfp3s5kpj81t8kqb.webp" class="d-block w-100 img-carousel" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://hitsoundmagazine.files.wordpress.com/2023/09/live-nation-twice.png"class="d-block w-100 img-carousel" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+           
+
+
+    
+    
         <section id="section-cards" class="swiper mySwiper">
             <h2>Tecnologia Games e Geeks</h2>
             <div class="swiper-wrapper conteiner-cards" id="api-data1">
@@ -127,5 +139,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/eventos.js"></script>
     <script src="./script/index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
