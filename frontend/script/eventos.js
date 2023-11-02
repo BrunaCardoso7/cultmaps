@@ -75,10 +75,10 @@ axios.get(apiUrl)
                 title.textContent = objeto.nome
                 descricao.appendChild(title)
             
-                const desc = document.createElement('p')
-                desc.classList.add('desc')
-                desc.textContent = objeto.descricao
-                descricao.appendChild(desc)
+                // const desc = document.createElement('p')
+                // desc.classList.add('desc')
+                // desc.textContent = objeto.descricao
+                // descricao.appendChild(desc)
             
                 const button = document.createElement('button')
                 button.classList.add('moreInfo')
