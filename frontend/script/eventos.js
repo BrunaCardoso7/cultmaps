@@ -25,7 +25,7 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
-const apiUrl = 'http://localhost:4000/pictures/'
+const apiUrl = 'https://cultmaps.onrender.com/pictures/'
 const section = document.getElementById('section-cards')
 const apiDataElement = document.getElementById('api-data1')
 const apiDataElement2 = document.getElementById('api-data2')
