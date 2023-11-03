@@ -259,7 +259,7 @@ input {
 
     padding: 0 10px;
     max-height: fit-content;
-    height: 20vh;
+    height: 18vh;
     max-height: max-content;
     margin-top: 60px;
     display: flex;
@@ -273,7 +273,7 @@ input {
     width: fit-content;
 }
 .text-box h2{
-    font-size: .5em;
+    font-size: .7em;
     text-align: center;    
 }
 .text-box h2 a{
@@ -283,21 +283,21 @@ input {
     color: #0300c2;
 }
 .box-categoria h1 span{
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 600;
     color:white;
     text-align: center;
 }
 
 .box-categoria h1{
-    font-size: .8em;
-    font-weight: 400;
+    font-size: .9em;
+    font-weight: 100;
     color:black;
     text-align: center;
-    
+ 
 }
 .box-categoria img{
-    height: 100%;
+    height: 90%;
 }
 .img-carousel{
     height: 100vh;
