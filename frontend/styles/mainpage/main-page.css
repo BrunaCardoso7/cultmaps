@@ -44,7 +44,7 @@ header{
 }
 
 .bar1 {
-
+    
     width: 15px;
     height:15px;
     border: 2px solid rgb(243, 243, 243);
@@ -52,7 +52,7 @@ header{
     border-radius: 15px;
     cursor: pointer;
     transform: .5s ease;
-
+    
 }
 .bar2 {
 
@@ -63,10 +63,10 @@ header{
     border-radius: 15px;
     cursor: pointer;
     transform: .5s ease;
-
+    
 }
 .bar3 {
-
+    
     width: 15px;
     height: 15px;
     border: 2px solid rgb(243, 243, 243);
@@ -74,7 +74,7 @@ header{
     border-radius: 15px;
     cursor: pointer;
     transform: .5s ease;
-
+    
 }
 
 .bar1:hover {
@@ -87,7 +87,7 @@ header{
     background-color: #dd5a03;
 }
 input {
-  display: block;
+    display: block;
 }
 .input{
     display: none;
@@ -252,12 +252,12 @@ input {
     align-items: center;
 }
 .box-categoria{
+    position: relative;
     background-color: #ff7316;
     border-radius: 14px;
-    width: 90vw;
+    width: 98vw;
     /* max-width: fit-content; */
-
-    padding: 0 10px;
+    padding: 10px 20px;
     max-height: fit-content;
     height: 18vh;
     max-height: max-content;
@@ -270,12 +270,17 @@ input {
 .text-box{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: fit-content;
+    
 }
 .text-box h2{
-    font-size: .6em;
+    color: #e1e1e1;
+    font-size: .8rem;
     text-align: center;    
     width: fit-content;
+    margin-left: 15px;
+    
 }
 .text-box h2 a{
     color: #0500FF;
@@ -284,21 +289,26 @@ input {
     color: #0300c2;
 }
 .box-categoria h1 span{
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 600;
     color:white;
     text-align: center;
 }
 
 .box-categoria h1{
-    font-size: .6em;
+    width: 350px;
+    margin-bottom: 15px;
+    font-size: .9rem;
     font-weight: 100;
     color:black;
     text-align: center;
- 
+    
 }
 .box-categoria img{
-    height: 90%;
+    position: absolute;
+    height: 80%;
+    left: 78%;
+    top: 20%;
 }
 .img-carousel{
     height: 100vh;
@@ -353,20 +363,20 @@ section .conteiner-cards{
 }
 .moreInfo{
     background-color: transparent;
-    color: rgb(255, 106, 0);
+    color: white;
     padding: 2px 20px;
     font-size: .9em;
     border-radius: 10px;
     border: none;
     margin-bottom: 5px;
     width: max-content;
+    background-color: rgb(255, 106, 0);
     border: 2px solid transparent;
 }
 .moreInfo:hover{
     transition: .3s;
     /* text-decoration: underline; */
     border: 2px solid rgb(255, 106, 0);
-    background-color: rgb(255, 106, 0);
     border: 2px solid white;
     color: white;
 }
@@ -481,7 +491,7 @@ section .conteiner-cards{
 }
 
 .modal p{
-
+    
     padding: 0 40px;
     font-size: 16px;
 }
@@ -591,4 +601,73 @@ footer{
     margin-top: 20px;
     text-align: center;
 }
+
+@media screen and (max-width: 375px) {
+    .categoria{
+        background-color: white;
+        width: 99vw;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-categoria{
+        position: relative;
+        background-color: #ff7316;
+        border-radius: 14px;
+        width: 98vw;
+        /* max-width: fit-content; */
+        padding: 10px 20px;
+        max-height: fit-content;
+        height: 18vh;
+        max-height: max-content;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: fit-content;
+       
+    }
+    .text-box h2{
+        color: #e1e1e1;
+        font-size: .72rem;
+        text-align: center;    
+        width: fit-content;
+        margin-left: 30px;
     
+    }
+    .text-box h2 a{
+        color: #0500FF;
+    }
+    .text-box h2 a:hover{
+        color: #0300c2;
+    }
+    .box-categoria h1 span{
+        font-size: .9rem;
+        font-weight: 600;
+        color:white;
+        text-align: center;
+    }
+    
+    .box-categoria h1{
+        width: 350px;
+        margin-bottom: 15px;
+        font-size: .8rem;
+        font-weight: 100;
+        color:black;
+        text-align: center;
+     
+    }
+    .box-categoria img{
+        position: absolute;
+        height: 80%;
+        left: 78%;
+        top: 20%;
+    }
+}

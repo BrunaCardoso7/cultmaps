@@ -256,3 +256,22 @@ input {
     height: 70vh;
     border-radius: 8px;
 }
+.moreInfo{
+    background-color: transparent;
+    color: rgb(255, 106, 0);
+    padding: 2px 20px;
+    font-size: .9em;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 5px;
+    width: max-content;
+    border: 2px solid transparent;
+}
+.moreInfo:hover{
+    transition: .3s;
+    /* text-decoration: underline; */
+    border: 2px solid rgb(255, 106, 0);
+    background-color: rgb(255, 106, 0);
+    border: 2px solid white;
+    color: white;
+}
