@@ -273,7 +273,7 @@ input {
     width: fit-content;
 }
 .text-box h2{
-    font-size: .7em;
+    font-size: .6em;
     text-align: center;    
 }
 .text-box h2 a{
@@ -283,14 +283,14 @@ input {
     color: #0300c2;
 }
 .box-categoria h1 span{
-    font-size: 1em;
+    font-size: 1.em;
     font-weight: 600;
     color:white;
     text-align: center;
 }
 
 .box-categoria h1{
-    font-size: .7em;
+    font-size: .8em;
     font-weight: 400;
     color:black;
     text-align: center;
