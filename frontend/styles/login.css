@@ -15,6 +15,7 @@ body{
     justify-content: center;
     padding: 20px;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .box{

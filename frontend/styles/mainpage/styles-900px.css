@@ -11,6 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
     gap: 2vw;
 }
 .conteiner-navBar{
@@ -72,8 +73,8 @@ body{
     font-size: 1em;
 }
 #nav-bar{
-    display: block;
-}
+    display: block; 
+} 
 .conteiner-navBar{
     display: block;
     position: static;

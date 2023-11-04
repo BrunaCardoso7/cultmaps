@@ -1,15 +1,18 @@
 const menuButton = document.getElementById('btn-menu');
 const navBar = document.getElementById('nav-bar');
-const body = document.getElementById('body')
+
 menuButton.addEventListener('click', () => {
-    if (navBar.style.display === 'block') {
+    console.log('bunda')
+    if (navBar.style.display === 'flex') {
         navBar.style.display = 'none';
     } else {
-        navBar.style.display = 'block';
+        navBar.style.display = 'flex';
     }
 });
 
-body.addEventListener('resize', e=>{
+const body = document.getElementById('body')
+
+body.addEventListener('resize', ()=>{
     if(window.innerWidth === 800){
         navBar.style.display = 'block'
     } else {
