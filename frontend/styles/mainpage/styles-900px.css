@@ -112,28 +112,14 @@ body{
 }
 .categoria{
     margin: auto;
-    background-color: white;
+    background-color: transparent;
     width: 75vw;
     height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.box-categoria{
-    background-color: #ff7300;
-    border-radius: 14px;
-    min-width: fit-content;
-    padding: 0 10px;
-    width: 90vw;    
-    max-height: fit-content;
-    height: 20vh;
-    max-height: max-content;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+
 .text-box{
     display: flex;
     flex-direction: column;

@@ -9,6 +9,18 @@ menuButton.addEventListener('click', () => {
         navBar.style.display = 'flex';
     }
 });
+const searchBox = document.getElementById('search-box')
+const btnSearch = document.getElementById('btn_search');
+const logo = document.getElementById('logo')
+btnSearch.addEventListener('click', ()=>{
+    if(searchBox.style.display === 'none'){
+        searchBox.style.display = 'block'
+        logo.style.display = 'none'
+    } else {
+        searchBox.style.display = 'none'
+        logo.style.display = 'block'
+    }
+})
 
 const body = document.getElementById('body')
 
