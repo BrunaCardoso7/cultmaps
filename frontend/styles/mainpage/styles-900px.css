@@ -46,7 +46,7 @@ body{
     padding: 1px 10px;
     border-radius: 14px;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: white;
     border: 2px solid rgb(255, 106, 0);
     transition: .2s;
@@ -71,20 +71,28 @@ body{
     color: #696868;
     font-size: 1em;
 }
-.search-container {
+#nav-bar{
+    display: block;
+}
+.conteiner-navBar{
+    display: block;
+    position: static;
+}
+.nav{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width:fit-content;
     z-index: 999;   
+    gap: 10px;
 }
 .search-container #search-box{
     width: 20vw;
     height: 30px;
     border-radius: 14px;
     border: none;
-    font-size: .7em;
+    font-size: .9em;
     padding: 0 20px;
     background-color: rgba(255, 255, 255, 0.397);
     /* border: 1px solid rgb(191, 191, 191); */
@@ -98,7 +106,7 @@ body{
 .search-container #search-box:focus{
     outline: 1px solid rgb(172, 172, 172);
     background-color: rgb(255, 255, 255);
-    font-size: .7em;
+    font-size: .9em;
     color: #696868;
 }
 .categoria{
@@ -111,7 +119,7 @@ body{
     align-items: center;
 }
 .box-categoria{
-    background-color: #ff7112;
+    background-color: #ff7300;
     border-radius: 14px;
     min-width: fit-content;
     padding: 0 10px;
@@ -134,6 +142,7 @@ body{
     margin-left: 200px;
     font-size: 1.3em;
     text-align: center;    
+    color: black;
 }
 .text-box h2 a{
     color: #0500FF;
@@ -143,7 +152,7 @@ body{
 }
 .box-categoria h1 span{
     font-size:1.2em;
-    font-weight: 600;
+    font-weight: 600;   
     color:white;
     text-align: start;
     
@@ -167,6 +176,7 @@ body{
     height: 100vh;
 }
 .image{
+    margin-top: 0;
     width: 100vw;
     height: 100vh;
     border-radius: 8px;
@@ -191,7 +201,7 @@ body{
     left:48%;
     display: flex;
     align-items: center;
-    top: 96vh;
+    top: 94vh;
     
 }
 footer{
@@ -254,7 +264,7 @@ footer{
 }
 .moreInfo{
     background-color: transparent;
-    color:white;
+    color:rgb(255, 106, 0);
     padding: 2px 20px;
     font-size: .9em;
     border-radius: 10px;
@@ -262,7 +272,7 @@ footer{
     margin-bottom: 5px;
     width: max-content;
     border: 2px solid transparent;
-    background-color: rgb(255, 106, 0);
+    background-color:transparent;
 }
 .moreInfo:hover{
     transition: .3s;
@@ -271,3 +281,107 @@ footer{
     border: 2px solid white;
     color: white;
 }
+section .conteiner-cards{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    min-height: max-content;
+    flex-wrap: nowrap;
+    gap: 0px;
+
+}
+
+.conteiner-cards .card:hover{
+    transition: .5s;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(176, 167, 167);
+    
+}
+.card .img{
+    /* background-color: #141414; */
+    height: 150px;
+    border-radius: 10px 10px 10px 10px;
+}
+.card .img> img{
+    /* background-color: #141414;   */
+    height: 160px;
+    border-radius: 10px 10px 0 0 ;
+}
+.card .descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.wrapper-tags{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0px 0;
+}
+.wrapper-tags p{
+    background-color: rgb(255, 106, 0);
+    padding: 1px 5px;
+    border-radius: 14px;
+    font-size: .8em;
+    color: aliceblue;
+    margin-top: 5px;
+    margin: 0;
+}
+.cat{
+    color: #7927a2;
+    font-size: .8em;
+    margin-bottom: 1px;
+    font-weight: 500;
+}
+.desc{
+    margin: 0;
+    font-size: .8em;
+    text-align: center;
+    color: #3f3e3e;
+    padding: 0 5px;
+    
+}
+.title{
+    margin: 0;
+    font-size: .8em;
+    text-align: center; 
+    font-weight: 600;
+    color: #252525;
+}
+.swiper {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+.mySwiper h2{
+    width: max-content;
+    color: rgb(24, 24, 24);
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-left:160px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50px;
+}
+

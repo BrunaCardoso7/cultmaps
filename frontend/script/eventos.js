@@ -1,5 +1,21 @@
+const menuButton = document.getElementById('btn-menu');
+const navBar = document.getElementById('nav-bar');
+const body = document.getElementById('body')
+menuButton.addEventListener('click', () => {
+    if (navBar.style.display === 'block') {
+        navBar.style.display = 'none';
+    } else {
+        navBar.style.display = 'block';
+    }
+});
 
-
+body.addEventListener('resize', e=>{
+    if(window.innerWidth === 800){
+        navBar.style.display = 'block'
+    } else {
+        navBar.style.display = 'none'
+    }
+})
 
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,

@@ -16,17 +16,19 @@
         
            <!--Div de Login-->
         <div class="form-box">
-            <h2>Login <span>CultMaps</span></h2>
+            <div class="logo">
+                <h2>Login</h2>
+            </div>
             <form action="https://cultmaps.onrender.com/users/login/" method="post"  enctype="multipart/form-data">
                 <div class="user">
                     <label for="nome"> Usuario </label>
-                    <input type="text" id="nome" placeholder="Digite o seu nome ou Email" required>
+                    <input type="text" name="email" id="nome" placeholder="Digite o seu nome ou Email" required>
                 </div>
 
                 <div class="senha">
                     <label for="senha" onclick="togglePassword()">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-                    <i class="fa fa-eye-slash" id="eyeIcon" onclick="togglePassword()"></i>
+                    <input type="password" id="senha" name="password" placeholder="Digite sua senha"  autocomplete="current-password" required>
+                    <i class="fa fa-eye-slash" id="eyeIcon"></i>
                     <p>Esqueceu a senha?</p>
                 </div>
                 <script>
@@ -53,5 +55,22 @@
     </div>
     <!--Fim da Div principal-->
     <script src="Login2.js"></script>
+    <script>
+        const senhaInput = document.getElementById('senha');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        eyeIcon.addEventListener('click', () => {
+            if (senhaInput.getAttribute('type') === 'password') {
+                senhaInput.setAttribute('type', 'text');
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                senhaInput.setAttribute('type', 'password');
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+            console.log('bunda')
+        });
+    </script>
 </body>
 </html>

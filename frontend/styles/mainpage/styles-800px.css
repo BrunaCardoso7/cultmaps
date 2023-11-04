@@ -98,17 +98,22 @@ input {
 #slide3:checked ~ .s1 {
     margin-left: -63.4%;
 } 
-.conteiner-header{
-    background-color: white;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+#nav-bar{
+    display: block;
 }
 .conteiner-navBar{
+    display: block;
+    position: static;
+}
+.nav{
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    position: relative;
+    width:fit-content;
+    z-index: 999;   
+    gap: 2px;
 }
 .conteiner-navBar a{
     display: flex;
@@ -138,7 +143,7 @@ input {
     padding: 1px 10px;
     border-radius: 14px;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
     border: 2px solid rgb(255, 106, 0);
     transition: .2s;
