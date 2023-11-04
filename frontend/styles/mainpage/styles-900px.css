@@ -29,6 +29,7 @@ body{
     font-size: calc(14px + 1 * ((100vw - 320px) / 680));
     width: max-content;
     flex-wrap: nowrap;
+    background-color: white;
 }
 .conteiner-navBar a:hover{
     color: rgb(255, 106, 0);
@@ -87,6 +88,7 @@ body{
     width:fit-content;
     z-index: 999;   
     gap: 10px;
+    
 }
 .search-container #search-box{
     width: 20vw;
