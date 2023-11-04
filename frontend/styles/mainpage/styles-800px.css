@@ -125,7 +125,6 @@ input {
     font-size: .8em;
     width: max-content;
     flex-wrap: nowrap;
-    background-color: white;
 }
 .conteiner-navBar a:hover{
     color: rgb(255, 106, 0);
