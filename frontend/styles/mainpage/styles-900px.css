@@ -16,7 +16,7 @@ body{
 .conteiner-navBar{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 .conteiner-navBar a{
     display: flex;
@@ -53,7 +53,7 @@ body{
 }
 .logo h2{
     display: block;
-    font-size: 1.2em;   
+    font-size: 1.6em;   
     line-height: 15px;
     font-weight: 700;
 }
@@ -102,8 +102,9 @@ body{
     color: #696868;
 }
 .categoria{
+    margin: auto;
     background-color: white;
-    width: 99vw;
+    width: 75vw;
     height: 35vh;
     display: flex;
     justify-content: center;
@@ -130,7 +131,8 @@ body{
     width: fit-content;
 }
 .text-box h2{
-    font-size: 1em;
+    margin-left: 200px;
+    font-size: 1.3em;
     text-align: center;    
 }
 .text-box h2 a{
@@ -148,25 +150,49 @@ body{
 }
 
 .box-categoria h1{
-    font-size: 1.4em;
+    width: fit-content;
+    font-size: 1.3em;
+    margin-right: 100px;
     font-weight: 100;
     color:black;
     
 }
 .box-categoria img{
-    height: 100%;
+    position: absolute;
+    height: 80%;
+    left: 85%;
+    top: 20%;
 }
 .img-carousel{
     height: 100vh;
 }
 .image{
-    width: 80vw;
-    height: 82vh;
+    width: 100vw;
+    height: 100vh;
     border-radius: 8px;
 }
+#slide1:checked ~ .s1 { 
+    margin-left: 0%;
+} 
+
+#slide2:checked ~ .s1 {
+    margin-left: -33.3%;
+} 
+
+#slide3:checked ~ .s1 {
+    margin-left: -66.7%;
+} 
 .conteiner-cards .card{
     /* background-color:rgb(244, 244, 244); */
     box-shadow: none;
+}
+.navigation {
+    position: absolute;
+    left:48%;
+    display: flex;
+    align-items: center;
+    top: 96vh;
+    
 }
 footer{
     background-color: rgb(255, 106, 0);

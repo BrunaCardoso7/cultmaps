@@ -1,101 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
-* {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Helvetica;
-    color: #323232;
-    border: none;
     font-family: 'Poppins', sans-serif;
-  }
-  
-  body {
-    background-image: url('../images/salvador-pelourinho-centro.png');
-    background-repeat:no-repeat;
-    background-size: 100%;
-  }
-  
-  textarea:focus, input:focus{
-    outline: none;
-  }
-  
-  a {
-    font-size: .8rem;
-  }
-  
-  a:hover {
-    color: #08558B;
-  }
-  
-  
-  #UM {
-    background-color: #FFF;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    padding: 20px 30px;
-    margin-top: 5vh;
-    border-radius: 10px;
+}
+body{
+    background-image: url(../images/art5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.box{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 930px;
+    height: 500px;
+    margin: 0 auto;
+
+}
+
+.form-box{
+    background-color: rgba(128, 126, 126, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 20px ;
+}
+.form-box h2{
+    font-size: 30px;
     text-align: center;
-  }
-  #UM h1{
-    font-weight: 700;
-  } 
-  
-  
-  form {
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-  
-  label, input {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-  
-  label {
-    font-weight: 600;
-    font-size: .8rem;
-  }
-  
-  input {
-    border-bottom: 2px solid #323232;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  input:focus {
-    border-bottom: 2px solid #08558B;
-  }
-  
-  #forgot-pass {
-    display: block;
-    text-align: right;
-  }
-  
-  input[type="submit"] {
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    height: 40px;
-    border-radius: 20px;
-    margin-top: 30px;
-    cursor: pointer;
-    color: #FFF;
-    background-color: #08558B;
+}
+.form-box h2 span{
+    color: #ff6600;
+}
+.form-box p{
     font-weight: bold;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #1B223C;
-    transition: .5s;
-  }
-  
-  
-  #Icons {
+    color: #000000;
+}
+.form-box p a{
+    color: #ff6600;
+    text-decoration: none;
+}
+.form-box form{
+    margin: 20px 0;
+}
+form .senha{
+    margin-bottom: 15px;
+}
+form .senha label{
+    color: #000000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .senha input{
+    width: 100%;
+    height: 47px;
+    background-color: rgba( 0, 0, 0, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #c2bbbb;
+    transition: all 0.4s ease;
+}
+form .senha input:focus{
+    border-color: #ff008869;
+}
+form .user{
+    margin-bottom: 15px;
+}
+form .user label{
+    color: #000000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .user input{
+    width: 100%;
+    height: 47px;
+    background-color: rgba(0, 0, 0, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #c2bbbb;
+    transition: all 0.4s ease;
+}
+form .user input:focus{
+    border-color: #ff008869;
+}
+
+form .senha p{
+    color: #000000;
+    font-size: 12px;
+    position:relative;
+    left: 252px;
+}
+form .senha p:hover{
+    color: #ff6600;
+    outline: 0;
+}
+form .Entrada button{
+    width: 100%;
+    height: 47px;
+    background: #ff6600;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.senha i{
+    font-size: 20px;
+    position: absolute;
+    top: 44%;
+    right: 12%;
+    cursor: pointer;
+    color: #777272;
+    
+}
+#Icons {
     margin-bottom: 10px;
+    justify-content: center;
+    align-items: center; 
+     margin-top: 20px;
+     text-align: center;
+  
   }
   
   #Icons p {
@@ -110,6 +155,7 @@
     line-height: 40px;
     margin: 0 5px;
     color: #FFF;
+    text-align: center;
   }
   
   .fa-facebook-f {
@@ -123,7 +169,21 @@
     background-color: #973232;
   }
   
-  
-  #Registro p {
-    margin-bottom: 5px;
-  }
+@media (max-width:930px) {
+    .img-box{
+        display: none;
+    }
+    .box{
+        width: 700px;
+    }
+    .form-box{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+@media (max-width:500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
+}

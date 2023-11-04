@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CultMaps</title>
+</head>
+<body>
+    
+    <!--Div principal-->
+    <div class="box">
+        
+           <!--Div de Login-->
+        <div class="form-box">
+            <h2>Login <span>CultMaps</span></h2>
+            <form action="https://cultmaps.onrender.com/users/login/" method="post"  enctype="multipart/form-data">
+                <div class="user">
+                    <label for="nome"> Usuario </label>
+                    <input type="text" id="nome" placeholder="Digite o seu nome ou Email" required>
+                </div>
+
+                <div class="senha">
+                    <label for="senha" onclick="togglePassword()">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    <i class="fa fa-eye-slash" id="eyeIcon" onclick="togglePassword()"></i>
+                    <p>Esqueceu a senha?</p>
+                </div>
+                <script>
+                   
+                    </script>
+            
+
+                <div class="Entrada">
+                    <button>Entrar</button>
+                    <p> Não tem uma conta? <a href="#"> Cadastre-se</a> </p>
+
+                </div>
+                <div id="Icons">
+                    <p>Logar com</p>
+                    <i class="fa fa-facebook-f"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-google"></i>
+                </div>
+            
+
+            </form>
+        </div>
+        <!--Fim da Div de Login-->
+    </div>
+    <!--Fim da Div principal-->
+    <script src="Login2.js"></script>
+</body>
+</html>
