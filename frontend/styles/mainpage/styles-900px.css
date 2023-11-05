@@ -54,7 +54,7 @@ body{
     transition: .2s;
 }
 .logo h2{
-    display: block;
+
     font-size: 1.6em;   
     line-height: 15px;
     font-weight: 700;
@@ -164,16 +164,42 @@ body{
 .img-carousel{
     height: 100vh;
 }
+.categoria{
+    height: 25vh;
+    background-color: #000000c0;
+    top: 75%;
+    width: 100vw;
+}
+.text-box h1 div{
+    color: var(--color-main);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.text-box button{
+
+}
+.text-box button:hover{
+    transition: .3s;
+    color: var(--color-main);
+    box-shadow: 0 0 10px var(--color-main);
+}
+.slide {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transition: .6s;
+    overflow: hidden;
+    background-color: var(--color-main);
+}
 .image{
-    margin-top: px;
     width: 100vw;
     height: 100vh;
     border-radius: 8px;
+    top: 58%;
 }
 #slide1:checked ~ .s1 { 
     margin-left: 0%;
 } 
-
 #slide2:checked ~ .s1 {
     margin-left: -33.3%;
 } 
@@ -365,7 +391,7 @@ section .conteiner-cards{
 .mySwiper h2{
     width: max-content;
     color: rgb(24, 24, 24);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.5em;
     margin-top: 30px;
     margin-left:160px;
@@ -373,4 +399,70 @@ section .conteiner-cards{
     text-align: center;
     border-radius: 50px;
 }
+#natal-conteiner{
+    width: 100vw;
+    height: fit-content;
 
+}
+#natal-conteiner h2{
+    text-align: start;
+    margin-left: 40px;
+    font-size: 1.8rem;
+}
+.catalogo-natal {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.catalogo-natal img{
+    width: min-content;
+    height: 350px;
+    border-radius: 14px;
+    margin-left: 40px;
+}
+.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+    margin-left: 80px;
+    width: 500px;
+}
+.info-wrapper h3{
+    color: var(--color-main);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.info-wrapper p{
+    width:100%;
+    font-size: 1rem;
+}
+.info-wrapper button{
+    border: 2px solid var(--color-main);
+    border: none;
+    background-color: var(--color-main);
+    border-radius: 14px;
+    color: white;
+    padding: 8px 20px;
+    width: fit-content;
+}
+.info-wrapper button:hover{ 
+    background-color: rgb(194, 103, 23);
+}
+.btn-natal{
+    display: flex;
+    gap: 10px;
+}
+.btn-natal .btn-fav{
+    border: 2px solid var(--color-main);
+    background-color: #fff;
+    color: var(--color-main);
+}
+.btn-natal .btn-fav:hover{
+    border: 2px solid var(--color-main);
+    color: #fff;
+    background-color: var(--color-main);
+}

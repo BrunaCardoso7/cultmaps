@@ -79,7 +79,6 @@ header{
     border-radius: 15px;
     cursor: pointer;
     transform: .5s ease;
-    
 }
 .bar3 {
     display: none;  
@@ -472,8 +471,8 @@ section .conteiner-cards{
 .mySwiper h2{
     width: max-content;
     color: rgb(24, 24, 24);
-    font-weight: 700;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1.3em;
     margin-top: 30px;
     margin-left: 20px;
     padding: 4px;
@@ -688,4 +687,74 @@ footer{
         left: 78%;
         top: 50%;
     }
+}
+#natal-conteiner{
+    width: 100vw;
+    height: fit-content;
+
+}
+#natal-conteiner h2{
+    font-size: 1.3rem;
+    margin-left: 0px;
+    font-weight: 700;
+    text-align: center;
+}
+.catalogo-natal {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.catalogo-natal img{
+    height: fit-content;
+    width: 90vw;
+    border-radius: 14px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-left: 0px;
+    width: 500px;
+}
+.info-wrapper h3{
+    color: var(--color-main);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center; 
+}
+.info-wrapper p{
+    width: 60%;
+    font-size: 12px;
+}
+.info-wrapper button{
+    border: 2px solid var(--color-main);
+    border: none;
+    background-color: var(--color-main);
+    border-radius: 14px;
+    color: white;
+    padding: 8px 10px;
+    width: fit-content;
+}
+.info-wrapper button:hover{ 
+    background-color: rgb(194, 103, 23);
+}
+.btn-natal{
+    display: flex;
+    gap: 10px;
+}
+.btn-natal .btn-fav{
+    border: 2px solid var(--color-main);
+    background-color: #fff;
+    color: var(--color-main);
+}
+.btn-natal .btn-fav:hover{
+    border: 2px solid var(--color-main);
+    color: #fff;
+    background-color: var(--color-main);
 }

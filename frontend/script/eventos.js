@@ -11,6 +11,7 @@ menuButton.addEventListener('click', () => {
 });
 const searchBox = document.getElementById('search-box')
 const btnSearch = document.getElementById('btn_search');
+
 const logo = document.getElementById('logo')
 btnSearch.addEventListener('click', ()=>{
     if(searchBox.style.display === 'none'){
@@ -159,3 +160,13 @@ axios.get(apiUrl)
     .catch(e=>{
         console.error('Erro: ', e )
 })
+// axios.get(apiUrl)
+// .then(response =>{
+//     const data = response.data
+//     const natalConteiner = document.getElementById('natal-conteiner')
+
+//     const   
+
+// }).catch(e=>{
+//     console.error('Erro: '+e)
+// })
