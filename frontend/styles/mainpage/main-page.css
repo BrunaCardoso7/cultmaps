@@ -368,7 +368,7 @@ section .conteiner-cards{
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    border: 2px solid rgb(235, 223, 223);
+    /* border:; */
 }
 .conteiner-cards .card:hover{
     transition: .5s;

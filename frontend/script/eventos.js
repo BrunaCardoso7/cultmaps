@@ -64,12 +64,13 @@ const apiUrl = 'https://cultmaps.onrender.com/pictures/'
 const section = document.getElementById('section-cards')
 const apiDataElement = document.getElementById('api-data1')
 const apiDataElement2 = document.getElementById('api-data2')
+const apiDataElement3 = document.getElementById('api-data3')
 axios.get(apiUrl)
 .then( response =>{
         const data = response.data
         data.forEach(objeto => {
-            console.log(objeto.categoria)
-            console.log(data)
+            // console.log(objeto.categoria)
+            // console.log(data)
                 const conteinerCards = document.createElement('div')
                 conteinerCards.classList.add('swiper-wrapper')
                 conteinerCards.classList.add('conteiner-cards')
@@ -81,7 +82,7 @@ axios.get(apiUrl)
                 const img = document.createElement('img')
                 img.setAttribute("src", objeto.src)
                 img.classList.add('img')
-                console.log(objeto.src)
+                // console.log(objeto.src)
                 card.appendChild(img)
                 
                 const descricao = document.createElement('div')
@@ -127,14 +128,16 @@ axios.get(apiUrl)
             if(objeto.categoria === 'Congresso e Palestras'){
                 apiDataElement2.appendChild(card)
             }
-            
+            if(objeto.categoria === 'Infantil'){
+                apiDataElement3.appendChild(card)
+            }
             else {
-                console.log('categoria não existente')
+                // console.log('categoria não existente')
             }
            
         });
         const moreInfo = document.querySelectorAll(".moreInfo")
-        console.log(moreInfo)
+        // console.log(moreInfo)
         const modal = document.getElementById("modal");
         const modalClose = document.getElementById("modal-close");
         moreInfo.forEach(btn =>{

@@ -166,7 +166,7 @@ body{
 }
 .categoria{
     height: 25vh;
-    background-color: #000000c0;
+    background-color: transparent;
     top: 75%;
     width: 100vw;
 }
@@ -175,9 +175,7 @@ body{
     font-weight: 600;
     text-decoration: underline;
 }
-.text-box button{
 
-}
 .text-box button:hover{
     transition: .3s;
     color: var(--color-main);
@@ -410,11 +408,12 @@ section .conteiner-cards{
     font-size: 1.8rem;
 }
 .catalogo-natal {
-    margin-top: 50px;
+    background-color: var(--color-main);
+    padding: 30px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 50px;
+
 }
 
 .catalogo-natal img{
@@ -432,17 +431,17 @@ section .conteiner-cards{
     width: 500px;
 }
 .info-wrapper h3{
-    color: var(--color-main);
+    color:white;
     font-weight: 700;
     font-size: 1.5rem;
 }
 .info-wrapper p{
     width:100%;
     font-size: 1rem;
+    color: white    ;
 }
 .info-wrapper button{
-    border: 2px solid var(--color-main);
-    border: none;
+    border: 2px solid white;
     background-color: var(--color-main);
     border-radius: 14px;
     color: white;
@@ -463,6 +462,6 @@ section .conteiner-cards{
 }
 .btn-natal .btn-fav:hover{
     border: 2px solid var(--color-main);
-    color: #fff;
-    background-color: var(--color-main);
+    color: var(--color-main);
+    background-color: #dedede;
 }

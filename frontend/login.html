@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultMaps</title>
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>CultMaps</title>
 </head>
 <body>
     
@@ -19,7 +19,7 @@
             <div class="logo">
                 <h2>Login</h2>
             </div>
-            <form action="https://cultmaps.onrender.com/users/login/" method="post"  enctype="multipart/form-data">
+            <form id="login" enctype="multipart/form-data">
                 <div class="user">
                     <label for="nome"> Usuario </label>
                     <input type="text" name="email" id="nome" placeholder="Digite o seu nome ou Email" required>
@@ -31,13 +31,8 @@
                     <i class="fa fa-eye-slash" id="eyeIcon"></i>
                     <p>Esqueceu a senha?</p>
                 </div>
-                <script>
-                   
-                    </script>
-            
-
                 <div class="Entrada">
-                    <button>Entrar</button>
+                    <button type="submit" onclick="logar()" id="btn-login">Entrar</button>
                     <p> Não tem uma conta? <a href="#"> Cadastre-se</a> </p>
 
                 </div>
@@ -47,30 +42,11 @@
                     <i class="fa fa-linkedin"></i>
                     <i class="fa fa-google"></i>
                 </div>
-            
-
             </form>
         </div>
         <!--Fim da Div de Login-->
     </div>
     <!--Fim da Div principal-->
-    <script src="Login2.js"></script>
-    <script>
-        const senhaInput = document.getElementById('senha');
-        const eyeIcon = document.getElementById('eyeIcon');
-
-        eyeIcon.addEventListener('click', () => {
-            if (senhaInput.getAttribute('type') === 'password') {
-                senhaInput.setAttribute('type', 'text');
-                eyeIcon.classList.remove('fa-eye-slash');
-                eyeIcon.classList.add('fa-eye');
-            } else {
-                senhaInput.setAttribute('type', 'password');
-                eyeIcon.classList.remove('fa-eye');
-                eyeIcon.classList.add('fa-eye-slash');
-            }
-            console.log('bunda')
-        });
-    </script>
+    <script src="./script/login.js"></script>
 </body>
 </html>
