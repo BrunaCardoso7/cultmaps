@@ -138,11 +138,11 @@ document.addEventListener('DOMContentLoaded', function(){
                 card.appendChild(button);
 
                 objectDataApi.push({
-                    id: objeto._id,
                     image: objeto.src,
                     nome: objeto.nome,
                     localizacao: objeto.localizacao,
                     data: dataString,
+                    autor: objeto.author,
                     descricao: objeto.descricao
                 });
 
@@ -165,48 +165,39 @@ document.addEventListener('DOMContentLoaded', function(){
                 card.addEventListener('click', () => {
                     const cardNome = card.getAttribute('data-nome');
                     const cardSelecionado = objectDataApi.find(data => data.nome === cardNome);
-
-                    // Corrigir o nome da variável aqui para cardSelecionado
-                    document.getElementById('image').setAttribute('src', cardSelecionado.image)
+                    document.getElementById('nome-evento').textContent = cardSelecionado.nome
+                    document.getElementById('image').setAttribute('src', cardSelecionado.image);
                     document.getElementById('modal-location').textContent = cardSelecionado.localizacao;
                     document.getElementById('modal-date').textContent = cardSelecionado.data;
                     document.getElementById('modal-description').textContent = cardSelecionado.descricao;
-
+                    document.getElementById('modal-autores').textContent = cardSelecionado.autor
                     modal.style.display = 'block';
                 });
             });
+            const modalClose = document.getElementById('modal-close')
+            modalClose.addEventListener("click", closeModal);
 
-            
-            const moreInfo = document.querySelectorAll(".moreInfo");
-            const modal = document.getElementById("modal");
-            const modalClose = document.getElementById("modal-close");
-            moreInfo.forEach(btn => {
-                btn.addEventListener("click", (e) => {
-                    // e.stopPropagation
-                    if (modal.style.display == "none") {
-                        modal.style.display = "block";
-                    } else {
-                        modal.style.display = "none";
-                    }
-                    modalClose.addEventListener("click", closeModal);
+            function closeModal() {
+                if(modal.style.display === "none"){
+                    modal.style.display = "block"
+                } else {
+                    modal.style.display = "none"
+                }
+            }
 
-                    function closeModal() {
-                        modal.style.display = "none";
-                    }
-                    window.addEventListener("click", (event) => {
-                        if (event.target === modal) {
-                            closeModal();
-                        }
-                    });
-                });
+            window.addEventListener("click", (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
             });
+
             const btnFav = document.querySelectorAll('.fa-star');
             btnFav.forEach(star => {
                 star.addEventListener('click', (e) => {
-                    e.stopPropagation()
+                    e.stopPropagation();
                     console.log('bunda');
                     const isFav = star.classList.toggle('fa-solid');
-                    cards.setAttribute('favorite', isFav);
+                    card.setAttribute('favorite', isFav);
                 });
             });
         })
@@ -214,5 +205,4 @@ document.addEventListener('DOMContentLoaded', function(){
             console.error('Erro: ', e);
         });
 });
-
 

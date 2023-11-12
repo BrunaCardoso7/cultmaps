@@ -132,13 +132,20 @@
                 <div class="img">
                     <img id="image" src="img/maxresdefault.jpg" alt="">
                 </div>
-                <h2>Detalhes do Evento</h2>
-                <p>Localização: <span id="modal-location"></span></p>
-                <p>Data: <span id="modal-date"></span></p>
-                <p>Descrição: <span id="modal-description"></span></p>
-                <div class="btn-pages">
-                    <button id="page-ofc">Página oficial</button>
-                    <a id="open-maps" class="map-button">Abrir Maps</a>
+                <div class="modal-info">
+                    <h2 id="nome-evento">Detalhes do Evento</h2>
+                    <p id="desc-mod"><b>Descrição do evento </b></p>
+                    <div class="loc-data">
+                        <p><b>Localização:</b> <span id="modal-location"></span></p>
+                        <p><b>Data: </b><span id="modal-date"></span></p>
+                    </div>
+                    <p><span id="modal-description"></span></p>
+                    <p><b>Autores:   </b><span id="modal-autores"></span></p>
+                    <p><b>Redes sociais:   </b><a id="modal-socias" href="https://youtu.be/7hZhmSmy8LU?si=4NXDQSYQ5naHDgBa">seuevento.com</a></p>
+                    <div class="btn-pages">
+                        <button id="open-maps">Página oficial</button>
+                        <a id="page-ofc" class="map-button"><i class="fa-brands fa-google"></i>Abrir Maps</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,6 +161,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <section id="section-cards" class="swiper mySwiper">
