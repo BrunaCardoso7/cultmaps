@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     autor: objeto.author,
                     descricao: objeto.descricao
                 });
-
+                
                 if (objeto.categoria === 'Tecnologia Games e Geeks') {
                     apiDataElement.appendChild(card);
                 }
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     // console.log('categoria não existente')
                 }
             });
-
+            
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => {
                 card.addEventListener('click', () => {
@@ -191,15 +191,49 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             });
 
+
+            function saveInLocalStorage(){
+                localStorage.setItem('favorites', JSON.stringify(favorites))
+            }
+
+            function loadLocalStorage(){
+                const storedFavorite = localStorage.getItem('favorites')
+                return storedFavorite? JSON.parse(storedFavorite):[]
+            }
+
+            const favorites = loadLocalStorage()
+
             const btnFav = document.querySelectorAll('.fa-star');
+    
             btnFav.forEach(star => {
+                const apiDataElementFav = document.getElementById('api-dataFav')
                 star.addEventListener('click', (e) => {
+                    console.log(favorites)
                     e.stopPropagation();
                     console.log('bunda');
                     const isFav = star.classList.toggle('fa-solid');
-                    card.setAttribute('favorite', isFav);
+                    star.setAttribute('favorite', isFav);
+                    console.log(isFav)
+                    const cardPai = star.parentElement
+                    console.log(cardPai)
+                    // const cardPai = star.parentElement
+                    if(isFav){
+                        const cardCopy = cardPai.cloneNode(true)
+                        apiDataElementFav.appendChild(cardCopy)
+                        favorites.push(cardCopy)
+                        saveInLocalStorage()
+                    } else {
+                        const index = favorites.indexOf(cardPai);
+                        if (index !== -1) {
+                            favorites.splice(index, 1);
+                            saveFavoritesToLocalStorage();
+                        }
+                    }
                 });
             });
+
+
+            
         })
         .catch(e => {
             console.error('Erro: ', e);
